@@ -1,0 +1,119 @@
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic Black.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic Bold.otf') format('opentype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic ExtraBold.otf') format('opentype');
+    font-weight: 800;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic Heavy.otf') format('opentype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Loew Next Arabic';
+    src: url('~assets/fonts/Loew Next Arabic Thin.otf') format('opentype');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+
+.px16 {
+    font-size: 16px;
+}
+
+.px18 {
+    font-size: 18px;
+}
+
+.px20 {
+    font-size: 20px;
+}
+
+.px22 {
+    font-size: 22px;
+}
+
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+
+.fw500 {
+    font-weight: 500;
+}
+
+.fw800 {
+    font-weight: 800;
+}
+
+.fwBold {
+    font-weight: bold;
+}
+
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+// -----------------------------------------------------------
+
+
+body {
+    font-family: 'Loew Next Arabic', Roboto, Arial, sans-serif;
+    font-size: 1.3rem;
+    font-stretch: normal;
+    font-style: normal;
+    letter-spacing: normal;
+    text-align: right;
+    color: white;
+    direction: rtl;
+}
+  

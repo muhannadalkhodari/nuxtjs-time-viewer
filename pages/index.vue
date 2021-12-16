@@ -1,5 +1,9 @@
 <template>
-  <Tutorial/>
+  <div class="container d-flex flex-column bg-light py-5">
+    Hi!
+    <br/>
+    Content Here
+  </div>
 </template>
 
 <script>

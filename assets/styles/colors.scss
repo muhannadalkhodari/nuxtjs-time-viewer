@@ -1,0 +1,37 @@
+
+$color-dark-slate-blue-1: #254176; // dark-slate-blue
+$color-dark-slate-blue-2: #1c3668; // dark-slate-blue-two
+$color-dark-slate-blue-3: #1f3a6e; // dark-slate-blue-three
+$color-dark-slate-blue-4: #223c6e; // dark-slate-blue-four
+
+$color-cloudy-blue-light: #e9edf0; // cloudy-blue light
+$color-cloudy-blue: #a7b5d2; // cloudy-blue
+
+$color-blue-grey: #8191b2; // blue grey
+$color-denim-blue: #375798; // denim-blue
+$color-light-navey-blue: #2a4986; // light-navy-blue
+
+$color-tertiary-1: #1d428b; // cobalt-1
+$color-tertiary-2: #193b7e; // cobalt-2
+$color-tertiary-3: #24417b; // dusk-blue
+
+$color-brownish-orange: #e28519; // brownish-orange
+$color-main-bg: #153064;
+$color-white: #fff;
+$color-black: #000;
+
+.darkBlueSlateBlue1BG {
+    background-color: $color-dark-slate-blue-1;
+}
+
+.darkBlueSlateBlue1 {
+    color: $color-dark-slate-blue-1;
+}
+
+.darkBlueSlateBlue3BG {
+    background-color: $color-dark-slate-blue-3;
+}
+
+.darkBlueSlateBlue2 {
+    color: $color-dark-slate-blue-2;
+}
