@@ -17,7 +17,9 @@
             :class="{'slide-in': waitingListOpened}"
             style="color: black"
         >
-            Waiting List Section
+            <div v-if="waitingListOpened">
+                Waiting List Section
+            </div>
         </div>
     </div>
 </div>
@@ -52,11 +54,11 @@
 
 <style lang="scss" scoped>
     .waiting-list {
-        width: 0px;
+        width: 0px !important;
         transition: width 1s ease-in-out;
 
         &.slide-in {
-            width: 350px;
+            width: 350px !important;
         }
     }
 </style>
