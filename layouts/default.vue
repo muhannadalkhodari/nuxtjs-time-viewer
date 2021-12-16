@@ -1,11 +1,24 @@
 <template>
 <div class="container-fluid px-0">
-    <div class="d-flex flex-column">
-        <LazyHeaderTop />
-        <LazyHeaderMiddle />
-        <LazyHeaderExpert />
+    <div class="d-flex flex-row">
+        <div class="flex-grow-1">
+            <div 
+                class="d-flex flex-column"                
+            >
+                <LazyHeaderTop />
+                <LazyHeaderMiddle />
+                <LazyHeaderExpert />
 
-        <Nuxt/>
+                <Nuxt/>
+            </div>
+        </div>
+        <div 
+            class="d-flex flex-column waiting-list"
+            :class="{'slide-in': !waitingListOpened}"
+            style="color: black"
+        >
+            Waiting List Section
+        </div>
     </div>
 </div>
 </template>
@@ -15,17 +28,21 @@
 
     export default {
 
+        created() {
+            this.$nuxt.$on('waitingListOpened', () => { this.toggle() });
+            this.$nuxt.$on('waitingListClosed', () => { this.toggle() });
+        },
+
         setup() {
-            let state= ref(false);
+            let waitingListOpened= ref(false);
 
             function toggle() {
-                state.value = !state.value;
+                waitingListOpened.value = !waitingListOpened.value;
             }
 
             return {
                 toggle,
-                state,
-                waitListOpened: false,
+                waitingListOpened,
                 sideNavOpened: false,
                 users: []
             }
@@ -33,6 +50,13 @@
     }
 </script>
 
-<style scoped>
-    
+<style lang="scss" scoped>
+    .waiting-list {
+        width: 0px;
+        transition: width 1s ease-in-out;
+
+        &.slide-in {
+            width: 350px;
+        }
+    }
 </style>

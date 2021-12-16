@@ -8,8 +8,24 @@
 </template>
 
 <script>
+    import {ref} from "@nuxtjs/composition-api";
+
     export default {
-        
+
+        setup() {
+            let state= ref(false);
+
+            function toggle() {
+                state.value = !state.value;
+            }
+
+            return {
+                toggle,
+                state,
+                waitListOpened: false,
+                sideNavOpened: false
+            }
+        }
     }
 </script>
 
