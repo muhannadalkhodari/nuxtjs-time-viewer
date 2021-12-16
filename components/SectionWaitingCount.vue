@@ -9,13 +9,13 @@
             <img 
                 src="../assets/icons/arrow-right-white.svg" 
                 class="w18 arrow-icon"
-                :class="{'flip': !waitingListOpened}"
+                :class="{'flip': waitingListOpened}"
             />
         </div>
 
         <div 
             class="d-flex flex-row card-to-hide" 
-            :class="{'hide': !waitingListOpened}"
+            :class="{'hide': waitingListOpened}"
         >
             <div 
                 class="mx-1 fw800" 

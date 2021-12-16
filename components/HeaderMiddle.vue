@@ -2,10 +2,10 @@
     <div>
         <div 
             class="d-flex flex-row justify-content-between header-middle darkBlueSlateBlue3BG"
-            :class="{'left-corner-round': !waitingListOpened}"
+            :class="{'left-corner-round': waitingListOpened}"
         >
-            <div>logo</div>
             <div>expert card</div>
+            <LazySectionTimeViewerLogo />
         </div>
     </div>
 </template>

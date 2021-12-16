@@ -14,7 +14,7 @@
         </div>
         <div 
             class="d-flex flex-column waiting-list"
-            :class="{'slide-in': !waitingListOpened}"
+            :class="{'slide-in': waitingListOpened}"
             style="color: black"
         >
             Waiting List Section
