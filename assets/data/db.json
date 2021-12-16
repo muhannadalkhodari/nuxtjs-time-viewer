@@ -129,6 +129,28 @@
         "rating": {
             "ar": "تقييم",
             "en": "Rating"
+        },
+        "media": {
+            "audio": {
+                "ar": "تجربة الصوت",
+                "en": "Audio test"
+            },
+            "camera": {
+                "ar": "تجربة الكاميرا",
+                "en": "Camera test"
+            },
+            "internetSpeed": {
+                "ar": "سرعة الانترنت",
+                "en": "Internet Speed"
+            },
+            "vGood": {
+                "ar": "جيد جداً",
+                "en": "Very Good"
+            },
+            "notTested": {
+                "ar": "لم تقم باختبارها",
+                "en": "Not tested"
+            }
         }
     }
 }

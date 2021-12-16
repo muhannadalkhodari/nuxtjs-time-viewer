@@ -5,7 +5,7 @@
                 expert nav
             </div>
             <div class="px-3">
-                test values
+                <LazySectionMultimediaTests />
             </div>
         </div>
     </div>
