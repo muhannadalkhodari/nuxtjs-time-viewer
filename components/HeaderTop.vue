@@ -29,9 +29,10 @@
     }
 </script>
 
-<style lang="css" scoped>
+<style lang="scss" scoped>
     .top-header {  
         height: 93px;
         padding: 25px 66px;
+        background-color: white;
     }
 </style>

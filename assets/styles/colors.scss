@@ -8,6 +8,8 @@ $color-cloudy-blue-light: #e9edf0; // cloudy-blue light
 $color-cloudy-blue: #a7b5d2; // cloudy-blue
 
 $color-blue-grey: #8191b2; // blue grey
+$color-blue-grey-light: #8c9cbe; // blue grey light
+$color-blue-grey-light-2: #889dc7; // blue grey light 2
 $color-denim-blue: #375798; // denim-blue
 $color-light-navey-blue: #2a4986; // light-navy-blue
 
@@ -19,6 +21,10 @@ $color-brownish-orange: #e28519; // brownish-orange
 $color-main-bg: #153064;
 $color-white: #fff;
 $color-black: #000;
+
+body {
+    background-color: $color-dark-slate-blue-2;
+}
 
 .darkBlueSlateBlue1BG {
     background-color: $color-dark-slate-blue-1;
@@ -32,6 +38,18 @@ $color-black: #000;
     background-color: $color-dark-slate-blue-3;
 }
 
+.darkBlueSlateBlue2BG {
+    background-color: $color-dark-slate-blue-2;
+}
+
 .darkBlueSlateBlue2 {
     color: $color-dark-slate-blue-2;
+}
+
+.blueGreyLight {
+    color: $color-blue-grey-light;
+}
+
+.blueGreyLight2 {
+    color: $color-blue-grey-light-2;
 }

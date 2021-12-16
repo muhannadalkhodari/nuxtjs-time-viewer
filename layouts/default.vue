@@ -1,11 +1,15 @@
 <template>
 <div class="container-fluid px-0">
     <div class="d-flex flex-row">
-        <div class="flex-grow-1">
+        <div 
+            class="flex-grow-1" 
+            :class="{'left-shadow': waitingListOpened}"
+        >
             <div 
-                class="d-flex flex-column"                
+                class="d-flex flex-column"
             >
                 <LazyHeaderTop />
+
                 <LazyHeaderMiddle />
                 <LazyHeaderExpert />
 
@@ -17,8 +21,8 @@
             :class="{'slide-in': waitingListOpened}"
             style="color: black"
         >
-            <div v-if="waitingListOpened">
-                Waiting List Section
+            <div>
+                <LazySectionWaitingList />
             </div>
         </div>
     </div>
@@ -54,11 +58,18 @@
 
 <style lang="scss" scoped>
     .waiting-list {
+        background-color: white !important;
         width: 0px !important;
         transition: width 1s ease-in-out;
+        height: 98.2vh;
 
         &.slide-in {
             width: 350px !important;
         }
+    }
+
+    .left-shadow {
+        z-index: 100;
+        box-shadow: -32px 140px 33px 0 rgb(29 66 139 / 51%);
     }
 </style>

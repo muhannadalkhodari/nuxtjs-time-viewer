@@ -24,6 +24,7 @@
 
 <script>
     import * as data  from "../assets/data/db.json";
+    
     export default {
         setup() {
             const user = {

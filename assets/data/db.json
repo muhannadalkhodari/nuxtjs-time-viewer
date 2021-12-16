@@ -84,6 +84,22 @@
         "waitingList" : {
             "ar": "قائمة الانتظار",
             "en": "Waiting List"
+        },
+        "since" : {
+            "ar": "منذ",
+            "en": "since"
+        },
+        "minute" : {
+            "ar": "دقيقة",
+            "en": "minute"
+        },
+        "rights" : {
+            "ar": "جميع الحقوق محفوظة",
+            "en": "All rights reserved"
+        },
+        "copyRights" : {
+            "ar": "تايم فيوير",
+            "en": "Time Viewer"
         }
     }
 }

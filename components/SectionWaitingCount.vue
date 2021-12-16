@@ -20,7 +20,7 @@
             <div 
                 class="mx-1 fw800" 
             >
-                {{waitingList.length}}
+                {{waitingList.length.toLocaleString('ar-EG')}}
             </div>
 
             <div 
@@ -44,7 +44,7 @@
             function toggleWaitingList() {
                 waitingListOpened.value = !waitingListOpened.value;
 
-                if(waitingListOpened) {
+                if(waitingListOpened.value) {
                     $nuxt.$emit('waitingListOpened');
                 }
                 else {
@@ -85,7 +85,7 @@
     }
 
     .card-to-hide {
-        transition: margin-left 1s, opacity 0.2s;
+        transition: margin-left 0.5s, opacity 0.2s;
 
         &.hide {
             margin-left: -200px;

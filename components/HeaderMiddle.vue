@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div style="background-color: white">
         <div 
             class="d-flex flex-row justify-content-between header-middle darkBlueSlateBlue3BG"
             :class="{'left-corner-round': waitingListOpened}"
@@ -42,12 +42,12 @@
         opacity: 0.97;
         color: white;
         border-top-left-radius: 0px;
-        box-shadow: 0px 0px 0px 0 rgba(29, 66, 139, 0.51);
+        // box-shadow: 0px 0px 0px 0 rgba(29, 66, 139, 0.51);
         transition: border-top-left-radius 1s, box-shadow 1s;
     }
 
     .left-corner-round {
         border-top-left-radius: 20px;
-        box-shadow: -32px 60px 33px 0 rgba(29, 66, 139, 0.51);
+        // box-shadow: -32px 60px 33px 0 rgba(29, 66, 139, 0.51);
     }
 </style>
