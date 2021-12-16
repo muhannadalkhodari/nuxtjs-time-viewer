@@ -1,6 +1,6 @@
 <template>
     <div 
-        class="d-flex flex-row darkBlueSlateBlue2 align-items-center px20 hide-overflow"
+        class="d-flex flex-row darkBlueSlateBlue2 align-items-center px20 hide-overflow pointer"
         @click="toggleWaitingList"
     >
         <div 

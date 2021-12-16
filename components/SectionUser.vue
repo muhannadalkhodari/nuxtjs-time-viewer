@@ -1,9 +1,16 @@
 <template>
     <div class="d-flex flex-row darkBlueSlateBlue2 align-items-center">
-        <div class="mr-0 ml-3">
+        <div 
+            class="mr-0 ml-3 pointer"
+            :title="user.notifications"
+        >
+            <div 
+                :class="{'notification-knob': user.notifications>0}"
+            />
             <img src="../assets/icons/bell-white.svg" class="w27 bell-icon"/>
         </div>
-        <div class="ellipse ml-0 mr-5">
+
+        <div class="ellipse ml-0 mr-5 pointer">
             <img src="../assets/icons/profile.svg" class="w27 profile-icon"/>
         </div>
         <div class="mr-3 ml-2 fwBold px16">
@@ -19,7 +26,10 @@
     import * as data  from "../assets/data/db.json";
     export default {
         setup() {
-            const user = data.me;
+            const user = {
+                ...data.me, 
+                notifications: Math.random() >0.6? Math.round(Math.random()*10) : 0
+            };
             const messages = data.messages;
 
             return {
@@ -55,5 +65,16 @@
         vertical-align: baseline;
         margin-top: -1.5px;
         margin-right: -1px;
+    }
+
+    .notification-knob {
+        width: 16px;
+        height: 16px;
+        border-radius: 50%;
+        margin: 0px -5px 0 0;
+        z-index: 1000;
+        position: absolute;
+        border: solid 1.7px #1c3668;
+        background-color: #e83866;
     }
 </style>
