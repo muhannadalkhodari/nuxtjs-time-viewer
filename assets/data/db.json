@@ -76,6 +76,15 @@
         "notifications": 4
     },
 
+    "doctor": {
+        "name": "هند الناهض",
+        "rating": 3,
+        "bio" : "",
+        "experties" : [
+
+        ]
+    },
+
     "messages": {
         "welcome": {
             "ar": "مرحباً بك",
@@ -100,6 +109,26 @@
         "copyRights" : {
             "ar": "تايم فيوير",
             "en": "Time Viewer"
+        },
+        "digitalClinic": {
+            "ar": "العيادة الرقمية",
+            "en": "Digital Clinic"
+        },
+        "of": {
+            "ar": "لـ ",
+            "en": "Of "
+        },
+        "doctor": {
+            "ar": "د. ",
+            "en": "Doc. "
+        },
+        "busy": {
+            "ar": "مشغول باستشارة",
+            "en": "Busy"
+        },
+        "rating": {
+            "ar": "تقييم",
+            "en": "Rating"
         }
     }
 }

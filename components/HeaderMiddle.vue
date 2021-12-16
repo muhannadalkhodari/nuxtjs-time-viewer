@@ -4,7 +4,7 @@
             class="d-flex flex-row justify-content-between header-middle darkBlueSlateBlue3BG"
             :class="{'left-corner-round': waitingListOpened}"
         >
-            <div>expert card</div>
+            <LazySectionExpertCard />
             <LazySectionTimeViewerLogo />
         </div>
     </div>
