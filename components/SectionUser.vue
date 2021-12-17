@@ -7,16 +7,17 @@
             <div 
                 :class="{'notification-knob': user.notifications>0}"
             />
-            <img src="../assets/icons/bell-white.svg" class="w27 bell-icon"/>
+            <img src="../assets/icons/bell-white.svg" class="w27 bell-icon d-none d-md-block"/>
+            <img src="../assets/icons/bell-white.svg" class="w27 d-block d-md-none"/>
         </div>
 
-        <div class="ellipse ml-0 mr-5 pointer">
+        <div class="ellipse ml-0 mr-2 mr-md-5 pointer">
             <img src="../assets/icons/profile.svg" class="w27 profile-icon"/>
         </div>
-        <div class="mr-3 ml-2 fwBold px16">
+        <div class="mr-3 ml-2 fwBold px16 d-none d-md-block">
             {{messages.welcome.ar}}
         </div>
-        <div class="mx-1 fw800 px20">
+        <div class="mx-1 fw800 px20 d-none d-md-block">
             {{user.name}}
         </div>
     </div>

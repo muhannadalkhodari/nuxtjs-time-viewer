@@ -1,10 +1,18 @@
 <template>
     <div style="background-color: white">
         <div 
-            class="d-flex flex-row justify-content-between header-middle darkBlueSlateBlue3BG"
+            class="d-flex flex-row justify-content-between align-items-center header-middle darkBlueSlateBlue3BG
+                    px-3 py-3 py-lg-5"
             :class="{'left-corner-round': waitingListOpened}"
         >
-            <LazySectionExpertCard />
+            <div class="d-block d-md-none">
+                <LazySectionUser />
+            </div>
+
+            <div class="d-none d-md-block">
+                <LazySectionExpertCard />
+            </div>
+
             <LazySectionTimeViewerLogo />
         </div>
     </div>
@@ -37,8 +45,8 @@
 
 <style lang="scss" scoped>
     .header-middle {
-        height: 183px;
-        padding: 48px 66px;
+        // height: 183px;
+        // padding: 48px 66px;
         opacity: 0.97;
         color: white;
         border-top-left-radius: 0px;

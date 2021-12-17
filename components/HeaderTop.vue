@@ -1,8 +1,15 @@
 <template>
     <div>
         <div class="d-flex flex-row justify-content-between top-header darkBlueSlateBlue1">
-            <LazySectionUser />
+            <div class="d-none d-md-block">
+                <LazySectionUser />
+            </div>
+
             <LazySectionWaitingCount />
+
+            <div class="d-block d-md-none">
+                =
+            </div>
         </div>
     </div>
 </template>

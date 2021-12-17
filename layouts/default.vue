@@ -11,9 +11,20 @@
                 <LazyHeaderTop />
 
                 <LazyHeaderMiddle />
+
+                <div class="d-block d-md-none">
+                    <LazySectionMultimediaTests />
+                </div>
+
+                <div class="d-block d-md-none">
+                    <div class="d-flex flex-row align-items-center p-4 m-0">
+                        <LazySectionExpertCard />
+                    </div>
+                </div>
+
                 <LazyHeaderExpert />
 
-                <Nuxt/>
+                <!-- <Nuxt/> -->
             </div>
         </div>
         <div 

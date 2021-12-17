@@ -1,50 +1,52 @@
 <template>
-    <div class="multi-media-card d-flex flex-row align-items-center justify-content-around">
+    <div class="gradient d-flex flex-column justify-content-center" dir="ltr">
+        <div class="multi-media-card d-flex flex-row align-items-center justify-content-around px-5 px-md-0" dir=rtl>
 
-        <div class="media-card d-flex flex-row align-items-center">
+            <div class="px-0 px-md-3 d-flex flex-row align-items-center">
 
-            <div class="d-flex ellipse green-border justify-content-center align-items-center">
-                <img src="../assets/icons/voice.svg" />
-            </div>
-
-            <div class="d-flex flex-column justify-contents-center px-3">
-                <div class="px16 fwBold">
-                    {{messages.media.audio.ar}}
+                <div class="d-flex ellipse green-border justify-content-center align-items-center">
+                    <img src="../assets/icons/voice.svg" />
                 </div>
-                <div class="px14 cloudyBlue">
-                    {{messages.media.vGood.ar}}
-                </div>
-            </div>
-        </div>
 
-        <div class="media-card d-flex flex-row align-items-center">
-
-            <div class="d-flex ellipse red-border justify-content-center align-items-center">
-                <img src="../assets/icons/video-cam.svg" />
-            </div>
-
-            <div class="d-flex flex-column justify-contents-center px-3">
-                <div class="px16 fwBold">
-                    {{messages.media.camera.ar}}
-                </div>
-                <div class="px14 cloudyBlue">
-                    {{messages.media.notTested.ar}}
+                <div class="d-flex flex-column justify-contents-center px-0 px-md-2">
+                    <div class="px16 fwBold d-none d-md-block">
+                        {{messages.media.audio.ar}}
+                    </div>
+                    <div class="px14 cloudyBlue d-none d-md-block">
+                        {{messages.media.vGood.ar}}
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <div class="media-card d-flex flex-row align-items-center">
+            <div class="px-0 px-md-3 d-flex flex-row align-items-center">
 
-            <div class="d-flex ellipse orange-border justify-content-center align-items-center">
-                <img src="../assets/icons/network.svg" />
+                <div class="d-flex ellipse red-border justify-content-center align-items-center">
+                    <img src="../assets/icons/video-cam.svg" />
+                </div>
+
+                <div class="d-flex flex-column justify-contents-center px-0 px-md-2">
+                    <div class="px16 fwBold d-none d-md-block">
+                        {{messages.media.camera.ar}}
+                    </div>
+                    <div class="px14 cloudyBlue d-none d-md-block">
+                        {{messages.media.notTested.ar}}
+                    </div>
+                </div>
             </div>
 
-            <div class="d-flex flex-column justify-contents-center px-3">
-                <div class="px16 fwBold">
-                    {{messages.media.internetSpeed.ar}}
+            <div class="px-0 px-md-3 d-flex flex-row align-items-center">
+
+                <div class="d-flex ellipse orange-border justify-content-center align-items-center">
+                    <img src="../assets/icons/network.svg" />
                 </div>
-                <div class="px14 cloudyBlue">
-                    Mbps {{(36).toLocaleString('ar-Eg')}}
+
+                <div class="d-flex flex-column justify-contents-center px-3 px-sm-2">
+                    <div class="px16 fwBold">
+                        {{messages.media.internetSpeed.ar}}
+                    </div>
+                    <div class="px14 cloudyBlue">
+                        Mbps {{(36).toLocaleString('ar-Eg')}}
+                    </div>
                 </div>
             </div>
         </div>
@@ -65,14 +67,18 @@
 </script>
 
 <style lang="scss" scoped>
+    .gradient {
+        height: 92px;
+        background-image: linear-gradient(80deg, #254176 11%, #1c3668 95%);
+    }
     .multi-media-card {
         max-width: 700px;
     }
 
-    .media-card {
-        margin-right: 20px;
-        margin-left: 20px;
-    }
+    // .media-card {
+    //     margin-right: 20px;
+    //     margin-left: 20px;
+    // }
 
     .ellipse {
         width: 52px;

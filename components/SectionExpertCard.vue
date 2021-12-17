@@ -22,7 +22,7 @@
                     {{messages.doctor.ar}}
                     {{doctor.fullName}}
 
-                    <div class="mx-3 px13 white status-highlight px-3 py-1 mt-1">
+                    <div class="mr-4 mr-md-3 px13 white status-highlight px-3 py-1 mt-1">
                         {{messages.busy.ar}}
                     </div>
                 </div>

@@ -4,7 +4,7 @@
         @click="toggleWaitingList"
     >
         <div 
-            class="mr-0 ml-3" 
+            class="mr-0 ml-3 d-none d-md-block" 
         >
             <img 
                 src="../assets/icons/arrow-right-white.svg" 
