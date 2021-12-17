@@ -25,6 +25,12 @@
                 <LazyHeaderExpert />
 
                 <Nuxt/>
+
+                <div class="reserve-mobile-card pointer d-block d-md-none">
+                    <div class="d-flex flex-row justify-content-center align-items-center px16 fw800">
+                        حجز عيادة (20 دينار كويتي)
+                    </div>
+                </div>
             </div>
         </div>
         <div 
@@ -82,5 +88,16 @@
     .left-shadow {
         z-index: 100;
         box-shadow: -32px 140px 33px 0 rgb(29 66 139 / 51%);
+    }
+
+    .reserve-mobile-card {
+        position: fixed;
+        margin: 0 10vw;
+        bottom: 50px;
+        height: 67px;
+        width: 80vw;
+        padding-top: 17px;
+        border-radius: 10px;
+        background-image: linear-gradient(107deg, #e83866 -26%, #e83866 -17%, #e57a3c 84%, #e57a3c 112%);
     }
 </style>
