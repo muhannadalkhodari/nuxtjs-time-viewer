@@ -77,15 +77,40 @@
     },
 
     "doctor": {
-        "name": "هند الناهض",
+        "firstName": "هند",
+        "lastName": "الناهض",
+        "fullName": "هند الناهض",
         "rating": 3,
         "bio" : "",
+        "reservePrice" : 20,
         "experties" : [
 
         ]
     },
 
     "messages": {
+        "nav": {
+            "about": {
+                "ar": "نبذه عن ",
+                "en": "About "
+            },
+            "store": {
+                "ar": "متجر",
+                "en": "Store "
+            },
+            "broadcast": {
+                "ar": "برودكاست",
+                "en": "Broadcasr "
+            },
+            "courses": {
+                "ar": "كورسات",
+                "en": "Courses"
+            },
+            "reserve": {
+                "ar": "حجز عيادة ",
+                "en": "Reserve clinic "
+            }
+        },
         "welcome": {
             "ar": "مرحباً بك",
             "en": "Welcome"
@@ -129,6 +154,10 @@
         "rating": {
             "ar": "تقييم",
             "en": "Rating"
+        },
+        "currency": {
+            "ar": "دينار كويتي",
+            "en": "Kuwaiti Dinar"
         },
         "media": {
             "audio": {

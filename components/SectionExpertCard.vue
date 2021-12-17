@@ -20,7 +20,7 @@
                 <div class="d-flex flex-row align-items-center px20 cloudyBlue">
                     {{messages.of.ar}}
                     {{messages.doctor.ar}}
-                    {{doctor.name}}
+                    {{doctor.fullName}}
 
                     <div class="mx-3 px13 white status-highlight px-3 py-1 mt-1">
                         {{messages.busy.ar}}
