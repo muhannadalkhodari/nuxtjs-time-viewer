@@ -1,12 +1,12 @@
 <template>
     <div class="row m-0 g-sm-1 g-md-3" dir="ltr">
 
-        <div class="col-sm-12 col-md-7">
+        <div class="col-sm-12 col-md-7 p-0 m-0">
             <LazyComponentItemViewer :item="selectedItem" />
         </div>
 
-        <div class="col-sm-12 col-md-5 mt-5" dir="rtl">
-            <div class="row px-2">
+        <div class="col-sm-12 col-md-5 p-0 mt-5" dir="rtl">
+            <div class="row px-lg-4">
                 <div
                     v-for="item in doctor.products.filter(i => i.type === 'video')"
                     :key="item"
