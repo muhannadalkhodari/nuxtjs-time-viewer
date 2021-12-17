@@ -1,11 +1,36 @@
 <template>
     <div class="d-flex flex-column mb-4 h280px">
-        <div class="thumbnail-light">
+        <div 
+            class="thumbnail"
+            :style="{ 
+                'background-image': item.type === 'video'? 
+                    'url(' + require(`/assets/img/product-${Math.round(1+Math.random()*3)}.jpg`) + ')'
+                    :'',
+                'background-position': item.type === 'video'? 'center':''
+            }" 
+        >
             <div 
-                class="thumbnail d-flex flex-row justify-content-center"
+                class="d-flex flex-row justify-content-center"
             >
-                <!-- <img src="../assets/img/product-1.jpg" class="clip"> -->
-                <img :src="require(`/assets/img/product-${Math.round(1+Math.random()*3)}.jpg`)">
+                <div 
+                    class="thumbnail-light"
+                    :class="{'darker': item.type !== 'video'}"
+                ></div>
+
+                <div 
+                    
+                    
+                    v-if="item.type === 'video'"
+                />
+
+                <div class="d-flex flex-row g-0 align-items-center item-type-icon px19 fwBold blueGrey">
+                    <img v-if="item.type === 'video'" src="../assets/icons/video-cam-white.svg" />
+                    <img v-if="item.type === 'audio'" src="../assets/icons/audio.svg" />
+                    <img v-if="item.type === 'word'" src="../assets/icons/word.svg" />
+                    <span v-if="item.type === 'word'" class="px-2">WORD</span>
+                    <img v-if="item.type === 'pdf'" src="../assets/icons/pdf.svg" />
+                    <span v-if="item.type === 'pdf'" class="px-2">PDF</span>
+                </div>
             </div>
         </div>
 
@@ -55,15 +80,27 @@
     }
 
     .thumbnail {
-        height: 200px;
-        object-fit: contain;
-        border-radius: 5px;
         background-color: #1d428b;
+        height: 196px;
+        border-radius: 5px;
         overflow: hidden;
     }
 
     .thumbnail-light {
         // background-image: linear-gradient(321deg, #10306f 86%, rgba(29, 66, 139, 0) 40%);
         background-image: linear-gradient(321deg, #10306fcc 5%, rgba(255,255,255, 0.3) 25%, rgba(29, 66, 139, 0));
+        position: relative;
+        width: 100%;
+        height: 196px;
+
+        &.darker {
+            background-image: linear-gradient(321deg, #10306fcc 5%, rgba(29, 66, 139, 0));
+        }
+    }
+
+    .item-type-icon {
+        position: absolute;
+        right: 30px;
+        bottom: 120px;
     }
 </style>
