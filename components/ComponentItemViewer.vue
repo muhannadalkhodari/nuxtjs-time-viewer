@@ -11,7 +11,7 @@
 
             <div v-if="item.type === 'video'">
                 <video 
-                    src="https://videos-cloudflare.jwpsrv.com/61bc8729_aedfa8767ab84265324b322e856d1afb096ee796/content/conversions/aqnx1YDY/videos/B3OR7LJU-33252557.mp4"
+                    src="../assets/video.mp4"
                     controls
                 >
                 </video>
