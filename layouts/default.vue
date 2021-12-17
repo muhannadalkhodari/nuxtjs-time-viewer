@@ -23,7 +23,7 @@
                 </div>
 
                 <LazyHeaderExpert />
-
+                
                 <Nuxt/>
 
                 <div class="reserve-mobile-card pointer d-block d-md-none">
@@ -35,7 +35,10 @@
         </div>
         <div 
             class="d-flex flex-column waiting-list"
-            :class="{'slide-in': waitingListOpened}"
+            :class="{
+                'slide-in-1000': waitingListOpened && ($nuxt.$route.path.length == 1),
+                'slide-in-350': waitingListOpened && ($nuxt.$route.path.length > 1)
+            }"
             style="color: black"
         >
             <div>
@@ -80,8 +83,12 @@
         transition: width 1s ease-in-out;
         height: 98.2vh;
 
-        &.slide-in {
+        &.slide-in-1000 {
             width: 1000px !important;
+        }
+
+        &.slide-in-350 {
+            width: 350px !important;
         }
     }
 
