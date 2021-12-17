@@ -24,7 +24,7 @@
 
                 <LazyHeaderExpert />
 
-                <!-- <Nuxt/> -->
+                <Nuxt/>
             </div>
         </div>
         <div 
@@ -75,7 +75,7 @@
         height: 98.2vh;
 
         &.slide-in {
-            width: 350px !important;
+            width: 1000px !important;
         }
     }
 
