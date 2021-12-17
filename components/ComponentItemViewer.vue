@@ -17,6 +17,16 @@
                 </video>
             </div>
 
+            <div class="buy-cart" v-if="item.type !== 'video'">
+                <div class="d-flex flex-row align-items-center px16 fwBold white">
+                    <img src="../assets/icons/cart.svg" style="z-index: 10;" />
+                    <img src="../assets/icons/cart-ellipse.svg" style="margin-left: -40px;"/>
+                    <div class="mx-4">
+                        تحميل / شراء
+                    </div>
+                </div>
+            </div>
+
             <div class="item-type-icon px25 fwBold blueGrey">
                 <div class="d-flex flex-column" dir="rtl">
                     <div class="d-flex flex-row">
@@ -43,9 +53,9 @@
                         </div>
                     </div>
 
-                    <div class="d-flex flex-row-reverse px14 blueGrey" :class="{'hidden': item.type === 'video'}">
+                    <div class="d-flex flex-row-reverse align-items-center px21 blueGrey" :class="{'hidden': item.type === 'video'}">
+                        <img src="../assets/icons/downloads.svg" class="mr-2" style="height: 25px"/>
                         {{item.downloadCount}}
-                        <img src="../assets/icons/downloads.svg" class="mr-2" />
                     </div>
                 </div>
                 
@@ -118,8 +128,14 @@
 
     .item-type-icon {
         position: absolute;
-        width: 95%;
+        width: 92%;
         right: 30px;
         bottom: 30px;
+    }
+
+    .buy-cart {
+        position: absolute;
+        left: 40px;
+        top: 40px;
     }
 </style>

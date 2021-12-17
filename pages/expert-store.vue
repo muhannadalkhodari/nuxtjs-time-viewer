@@ -1,11 +1,11 @@
 <template>
-    <div class="row m-0 g-sm-1 g-md-3 mt-4" dir="ltr">
+    <div class="row m-0 g-sm-1 g-md-3" dir="ltr">
 
         <div class="col-sm-12 col-md-7">
-            <!-- <LazyComponentItemViewer :item="selectedItem" /> -->
+            <LazyComponentItemViewer :item="selectedItem" />
         </div>
 
-        <div class="col-sm-12 col-md-5" dir="rtl">
+        <div class="col-sm-12 col-md-5 mt-5" dir="rtl">
             <div class="row px-2">
                 <div
                     v-for="item in doctor.products"
