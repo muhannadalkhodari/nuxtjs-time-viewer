@@ -2,7 +2,7 @@
     <div style="background-color: white">
         <div 
             class="d-flex flex-row justify-content-between align-items-center header-middle darkBlueSlateBlue3BG
-                    px-3 py-3 py-lg-5"
+                    px-3 py-3 py-lg-5 top-corners-round"
             :class="{'left-corner-round': waitingListOpened}"
         >
             <div class="d-block d-md-none">
@@ -57,5 +57,12 @@
     .left-corner-round {
         border-top-left-radius: 20px;
         // box-shadow: -32px 60px 33px 0 rgba(29, 66, 139, 0.51);
+    }
+
+    @media only screen and (max-width: 765px) {
+        .top-corners-round {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
     }
 </style>
