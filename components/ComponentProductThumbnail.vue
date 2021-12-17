@@ -17,14 +17,14 @@
                     :class="{'darker': item.type !== 'video'}"
                 ></div>
 
-                <!-- <div class="d-flex flex-row g-0 align-items-center item-type-icon px19 fwBold blueGrey">
+                <div class="d-flex flex-row g-0 align-items-center item-type-icon px19 fwBold blueGrey">
                     <img v-if="item.type === 'video'" src="../assets/icons/video-cam-white.svg" />
                     <img v-if="item.type === 'audio'" src="../assets/icons/audio.svg" />
                     <img v-if="item.type === 'word'" src="../assets/icons/word.svg" />
                     <span v-if="item.type === 'word'" class="px-2">WORD</span>
                     <img v-if="item.type === 'pdf'" src="../assets/icons/pdf.svg" />
                     <span v-if="item.type === 'pdf'" class="px-2">PDF</span>
-                </div> -->
+                </div>
             </div>
         </div>
 
