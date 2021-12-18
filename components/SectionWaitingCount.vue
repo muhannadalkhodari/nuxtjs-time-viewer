@@ -3,6 +3,23 @@
         class="d-flex flex-row darkBlueSlateBlue2 align-items-center px20 hide-overflow pointer"
         @click="toggleWaitingList"
     >
+        <!-- <div class="waiting-list-mobile-title d-none d-sm-block d-md-none"> -->
+        <div 
+            class="waiting-list-mobile-title d-block d-md-none "
+            :class="{'move': waitingListOpened}"
+        >
+            <div class="d-flex flex-row px-4"
+            >
+                <div class="mx-1 fw800" >
+                    {{waitingList.length.toLocaleString('ar-EG')}}
+                </div>
+
+                <div class="mr-3 ml-2 fw800" >
+                    {{messages.waitingList.ar}}
+                </div>
+            </div>
+        </div>
+
         <div 
             class="mr-0 ml-3 d-none d-md-block" 
         >
@@ -38,6 +55,13 @@
     import * as data  from "../assets/data/db.json";
 
     export default {
+
+        created() {
+            this.$nuxt.$on('waitingListClosed', () => { setTimeout(() => {
+                this.waitingListOpened = false;
+            }, 100); });
+        },
+
         setup() {
             let waitingListOpened= ref(false);
 
@@ -90,6 +114,17 @@
         &.hide {
             margin-left: -200px;
             opacity: 0;
+        }
+    }
+
+    .waiting-list-mobile-title {
+        position: absolute;
+        top: 32px;
+        right: 42px;
+        transition: right 0.2s ease; // 0.2s;
+
+        &.move {
+            right: 25px;
         }
     }
 

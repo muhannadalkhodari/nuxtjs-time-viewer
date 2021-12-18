@@ -6,6 +6,9 @@
             v-if="waitingListOpened"
     >
         <div class="d-flex flex-column">
+
+            
+            
             <div class="d-flex flex-row px-4 hide-on-small">
                 <div class="mx-1 fw800" >
                     {{waitingList.length.toLocaleString('ar-EG')}}
@@ -99,6 +102,9 @@
 
             function toggle() {
                 waitingListOpened.value = !waitingListOpened.value;
+                if(!waitingListOpened.value) {
+                    $nuxt.$emit('waitingListClosed');
+                }
             }
 
             let waitingList = data.waitingList.map((uId, index) => {
@@ -159,8 +165,6 @@
         background-color: #f5f5f5;
         border-radius: 0 50px 50px 0;
     }
-
-    
 
     @media only screen and (max-width: 765px) {
         .hide-on-small {
