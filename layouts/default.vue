@@ -28,7 +28,11 @@
 
                 <div class="reserve-mobile-card pointer d-block d-md-none">
                     <div class="d-flex flex-row justify-content-center align-items-center px16 fw800">
-                        حجز عيادة (20 دينار كويتي)
+                        {{messages.nav.reserve.ar}}
+                        (
+                            {{doctor.reservePrice}}
+                            {{messages.currency.ar}}
+                        )
                     </div>
                 </div>
             </div>
@@ -36,8 +40,9 @@
         <div 
             class="d-flex flex-column waiting-list"
             :class="{
-                'slide-in-1000': waitingListOpened && ($nuxt.$route.path.length == 1),
-                'slide-in-350': waitingListOpened && ($nuxt.$route.path.length > 1)
+                'slide-in-1000': waitingListOpened && ($nuxt.$route.path.length == 1 || ($nuxt.$route.path.indexOf('courses') !== -1)),
+                'slide-in-500': waitingListOpened && ($nuxt.$route.path.length >= 1 && ($nuxt.$route.path.indexOf('courses') !== -1)),
+                'slide-in-350': waitingListOpened && ($nuxt.$route.path.length > 1 && ($nuxt.$route.path.indexOf('courses') === -1))
             }"
             style="color: black"
         >
@@ -51,6 +56,7 @@
 
 <script>
     import {ref} from "@nuxtjs/composition-api";
+    import * as data  from "../assets/data/db.json";
 
     export default {
 
@@ -67,6 +73,8 @@
             }
 
             return {
+                doctor: data.doctor,
+                messages: data.messages,
                 toggle,
                 waitingListOpened,
                 sideNavOpened: false,
@@ -89,6 +97,10 @@
 
         &.slide-in-350 {
             width: 350px !important;
+        }
+
+        &.slide-in-500 {
+            width: 500px !important;
         }
     }
 

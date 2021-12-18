@@ -1,5 +1,7 @@
 <template>
-    <div class="d-flex flex-column mb-4 h280px">
+    <div class="d-flex flex-column mb-4 h280px"
+        :class="{'course': item.course}"
+    >
         <div 
             class="thumbnail"
             :style="{ 
@@ -17,8 +19,15 @@
                     :class="{'darker': item.type !== 'video'}"
                 ></div>
 
-                <div class="d-flex flex-row g-0 align-items-center item-type-icon px19 fwBold blueGrey">
-                    <img v-if="item.type === 'video'" src="../assets/icons/video-cam-white.svg" />
+                <div class="d-flex flex-row g-0 align-items-center item-type-icon px19 fwBold blueGrey"
+                    :class="{'course': item.course}"
+                >
+                    <span v-if="(item.type === 'video') && (item.course)" class="px-2 px14">
+                        {{Math.round(Math.random() * 20 + 5)}}
+                        {{messages.video.ar}}
+                    </span>
+                    <img v-if="(item.type === 'video') && (!item.course)" src="../assets/icons/video-cam-white.svg" />
+                    <img v-if="(item.type === 'video') && (item.course)" src="../assets/icons/video-cam-secondary.svg" />
                     <img v-if="item.type === 'audio'" src="../assets/icons/audio.svg" />
                     <img v-if="item.type === 'word'" src="../assets/icons/word.svg" />
                     <span v-if="item.type === 'word'" class="px-2">WORD</span>
@@ -43,7 +52,7 @@
                     </div>
                 </div>
 
-                <div class="d-flex flex-row align-items-center px14 blueGrey">
+                <div class="d-flex flex-row align-items-center px14 blueGrey" v-if="(!item.course)" >
                     {{item.downloadCount}}
                     <img src="../assets/icons/downloads.svg" class="mr-2" />
                 </div>
@@ -71,6 +80,10 @@
 <style lang="scss" scoped>
     .h280px {
         height: 280px !important;
+
+        &.course{
+            height: 260px !important;
+        }
     }
 
     .thumbnail {
@@ -96,5 +109,9 @@
         position: absolute;
         right: 30px;
         bottom: 120px;
+
+        &.course{
+            bottom: 100px;
+        }
     }
 </style>

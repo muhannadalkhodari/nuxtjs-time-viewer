@@ -17,7 +17,12 @@
                 </NuxtLink>
 
                 <NuxtLink to="/expert-courses">
-                    {{messages.nav.courses.ar}}
+                    <div @click="toggleCourse">
+                        <span v-if="courseSelected && ($nuxt.$route.path.toString().indexOf('courses') !== -1)">
+                            <img src="../assets/icons/arrow-right-white.svg">
+                        </span>
+                        {{messages.nav.courses.ar}}
+                    </div>
                 </NuxtLink>
 
                 <NuxtLink to="/expert-reserve">
@@ -40,12 +45,31 @@
 </template>
 
 <script>
+    import {ref} from "@nuxtjs/composition-api";
     import * as data  from "../assets/data/db.json";
 
     export default {
+
+        created() {
+            this.$nuxt.$on('courseSelected', () => {
+                this.courseSelected = true;
+            });
+        },
+
         setup() {
 
+            let courseSelected = ref(false);
+
+            function toggleCourse() {
+                if(courseSelected.value) {
+                    courseSelected.value = false;
+                    $nuxt.$emit('courseDeselected');
+                }
+            }
+
             return {
+                toggleCourse,
+                courseSelected,
                 messages: data.messages,
                 doctor: data.doctor
             }
