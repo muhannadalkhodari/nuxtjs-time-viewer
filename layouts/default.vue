@@ -1,6 +1,21 @@
 <template>
 <div class="container-fluid px-0">
     <div class="d-flex flex-row">
+
+        <div 
+            class="d-flex flex-column waiting-list d-none d-sm-block d-md-none"
+            :class="{
+                'slide-in-1000': waitingListOpened && ($nuxt.$route.path.length == 1 || ($nuxt.$route.path.indexOf('courses') !== -1)),
+                'slide-in-500': waitingListOpened && ($nuxt.$route.path.length >= 1 && ($nuxt.$route.path.indexOf('courses') !== -1)),
+                'slide-in-350': waitingListOpened && ($nuxt.$route.path.length > 1 && ($nuxt.$route.path.indexOf('courses') === -1))
+            }"
+            style="color: black"
+        >
+            <div>
+                <LazySectionWaitingList />
+            </div>
+        </div>
+
         <div 
             class="flex-grow-1" 
             :class="{'left-shadow': waitingListOpened}"
@@ -37,8 +52,9 @@
                 </div>
             </div>
         </div>
+
         <div 
-            class="d-flex flex-column waiting-list"
+            class="d-flex flex-column waiting-list hide-on-small"
             :class="{
                 'slide-in-1000': waitingListOpened && ($nuxt.$route.path.length == 1 || ($nuxt.$route.path.indexOf('courses') !== -1)),
                 'slide-in-500': waitingListOpened && ($nuxt.$route.path.length >= 1 && ($nuxt.$route.path.indexOf('courses') !== -1)),
@@ -50,6 +66,7 @@
                 <LazySectionWaitingList />
             </div>
         </div>
+
     </div>
 </div>
 </template>
@@ -101,6 +118,14 @@
 
         &.slide-in-500 {
             width: 500px !important;
+        }
+    }
+
+    
+
+    @media only screen and (max-width: 765px) {
+        .hide-on-small {
+            display: none !important;
         }
     }
 

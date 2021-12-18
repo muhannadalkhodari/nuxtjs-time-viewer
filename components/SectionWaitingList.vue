@@ -2,11 +2,11 @@
     <div 
         class="waiting-list-card container-fluid px-0
                 darkBlueSlateBlue1 d-flex flex-column justify-content-between
-                pr-5"
+                pr-md-5 pl-3 pl-md-0"
             v-if="waitingListOpened"
     >
         <div class="d-flex flex-column">
-            <div class="d-flex flex-row px-4">
+            <div class="d-flex flex-row px-4 hide-on-small">
                 <div class="mx-1 fw800" >
                     {{waitingList.length.toLocaleString('ar-EG')}}
                 </div>
@@ -16,7 +16,7 @@
                 </div>
             </div>
 
-            <div class="small-line mx-4 mb-1"></div>
+            <div class="small-line mx-4 mb-1 hide-on-small"></div>
 
             <div class="waiting-users-list">
                 <div 
@@ -53,7 +53,7 @@
         </div>
 
         <div 
-            class="mr-3 ml-2 mb-3 px16 blueGreyLight2" 
+            class="mr-3 ml-2 mb-3 px16 blueGreyLight2 hide-on-small" 
         >
             <div class="d-flex flex-column">
                 <div>
@@ -139,6 +139,7 @@
     .waiting-users-list {
         height: calc(83vh - 120px)  !important;
         overflow-y: scroll;
+        min-width: 250px;
     }
     .waiting-users-list::-webkit-scrollbar {
         display: none;
@@ -157,6 +158,18 @@
     .me-card {
         background-color: #f5f5f5;
         border-radius: 0 50px 50px 0;
+    }
+
+    
+
+    @media only screen and (max-width: 765px) {
+        .hide-on-small {
+            opacity: 0;
+        }
+
+        .me-card {
+            border-radius: 50px 0 0 50px;
+        }
     }
 
 </style>
